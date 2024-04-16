@@ -7,7 +7,7 @@ But we can engineer AI to do exactly that, and more.
 Project Mariana asks what massive synthesis using AI might look like.
 
 # design philosophy
-- maximally exploit the long working memory advantage (long context window) LLMs have over humans 
+- maximally exploit the working memory (context window) advantage LLMs have over humans 
 - quality of research should scale with spend budget
 - agent should search to load diverse and high quality info into context 
 
