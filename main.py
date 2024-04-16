@@ -7,6 +7,7 @@ import shutil
 import anthropic
 from pypdf import PdfReader
 
+
 client = anthropic.Anthropic(
     # defaults to os.environ.get("ANTHROPIC_API_KEY")
     api_key=os.getenv("ANTHROPIC"),
@@ -281,8 +282,6 @@ def main():
     budget = 5
     run_agent(query, budget)
 
-main()
+if __name__ == '__main__':
+    main()
 
-# NOTE
-# claude opus still makes a lot of mistakes
-# it gets type of tools wrong
