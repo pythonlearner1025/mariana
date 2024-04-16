@@ -1,25 +1,25 @@
 from dotenv import load_dotenv
 from prompt import main_prompt, obs_prompt
 from exa_py import Exa
-import urllib, urllib.request, json
+import urllib, urllib.request
 import os
 import shutil
 import anthropic
 from pypdf import PdfReader
 
-
+load_dotenv()
 client = anthropic.Anthropic(
-    # defaults to os.environ.get("ANTHROPIC_API_KEY")
     api_key=os.getenv("ANTHROPIC"),
 )
-load_dotenv()
 exa = Exa(os.getenv("EXA"))
+
+# claude3 costs
 in_cost = 15/1000000 # $0.015/1K
 out_cost = 75/1000000 # $0.075/1K
 
-# gpt4 cost
-# $0.01/1k 
-# $0.03/1k
+# gpt4 costs
+# in: $0.01/1k 
+# out: $0.03/1k
 
 # save pdfs to memory/raw
 # TOOL
