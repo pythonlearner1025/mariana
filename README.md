@@ -1,14 +1,15 @@
-# Mariana - deep research agent
-Many of humanity's best ideas have been interdisciplinary: for example, deep learning was ushered in by researchers with deep interests in cognitive science and computer science. 
-However, the type of mind that can synthesize insights across domains is rare. 
-Fundamentally, biological limits constrain us from performing sweeping synthesis across multiple domains. 
-AI need not take on our faults. 
-Mariana explores the exciting possibility of using AI to synthesize research between any number of subjects.
+# mariana - information synthesis at scale
+Humanity's best ideas have been interdisciplinary: for example, deep learning was ushered in by researchers with deep expertise in cognitive science and computer science. 
+However, minds that can synthesize new insights from multiple subjects are rare. 
+Fundamentally, our brains weren't designed to perform such sweeping synthesis. 
+Nobody can hold 100 papers in their working memory at once (we can barely hold seven digits).
+But we can engineer AI to do exactly that, and more. 
+Project Mariana asks what massive synthesis using AI might look like.
 
 # design philosophy
-- should be useful
+- maximally exploit the long working memory advantage (long context window) LLMs have over humans 
 - quality of research should scale with spend budget
-- information loaded into context must be diverse and high quality 
+- agent should search to load diverse and high quality info into context 
 
 # observations
 - claude3-opus gets argument types wrong ~50% when using tools (functions)
