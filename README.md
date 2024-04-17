@@ -1,11 +1,14 @@
 # mariana - deep search agent
 
-Search agent that does deep saerch to answer your question. \  
-The core idea is that the quality of search should scale with the value of answering the search query (quantified by $ spend budget) \
+Search agent that does deep saerch to answer your question.    
+
+The core idea is that the quality of search should scale with the value of answering the search query (quantified by $ spend budget)  
+
 I'm betting that for queries like: 
 - candidate compounds for new drug synthesis (drug development)
 - what can we learn from field A to apply to field B (research)
 - everyone who's working on X currently (recruiting)
+
 Current search engines are bad at answering them, and the value of answering queries justifies long wait times & search cost.  
 
 **Experimental**, only supports arxiv search using Exa & arxiv API currently for research related queries.
