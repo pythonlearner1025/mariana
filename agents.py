@@ -1,5 +1,6 @@
 from openai import OpenAI
 from anthropic import Anthropic
+from groq import Groq
 from tools import execute_tool
 from prompt import obs_prompt
 import openai
@@ -159,6 +160,34 @@ class AnthropicAgent:
 
     def get_burn(self): 
        return self.burn
+
+class GroqAgent:
+    def __init__(self, key, sys_prompt, budget, model='mixtral-8x7b-32768'):
+        self.client = Groq(api_key=key)
+        self.model = model
+        self.messages = [{
+            'role': 'user',
+            'content': sys_prompt
+        }]
+        self.budget = budget
+        self.burn = 0
+    
+    def call(self, msg):
+        self.messages.append({
+            'role': 'user',
+            'content': msg
+        })
+        with self.client.chat.completions.create(
+            model=self.model,
+            messages=self.messages,
+            temperature=0.9,
+            max_tokens=4096,
+            stream=True,
+            stop=None
+        ) as stream:
+            for chunk in stream:
+                print(chunk.choices[0].delta.content, end="")
+
 
 def count_tok(text, model="gpt-4-turbo"):
     """Returns the number of tokens used by a list of messages."""

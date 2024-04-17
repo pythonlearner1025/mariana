@@ -4,7 +4,7 @@ from exa_py import Exa
 import os
 from openai import OpenAI
 from tools import *
-from agents import OAIAgent, AnthropicAgent
+from agents import OAIAgent, AnthropicAgent, GroqAgent
 
 load_dotenv()
 #client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC"),)
@@ -22,13 +22,14 @@ out_cost = 75/1000000 # $0.075/1K
 def run_agent(agent, query):
     while agent.burn < agent.budget:
         agent.call(query)
-        print(f'in_toks: {agent.latest.input_tokens} | out_toks: {agent.latest.output_tokens} |  msg cost: ${agent.get_latest_burn()} | total cost: ${agent.get_burn()}')
+        #print(f'in_toks: {agent.latest.input_tokens} | out_toks: {agent.latest.output_tokens} |  msg cost: ${agent.get_latest_burn()} | total cost: ${agent.get_burn()}')
         input()
 
 def main():
     query = 'how to reward language in LLMs to get LLM self-play'
     budget = 5
-    agent = OAIAgent(os.getenv('OAI'), sys_prompt, budget)
+#    agent = OAIAgent(os.getenv('OAI'), sys_prompt, budget)
+    agent = GroqAgent(os.getenv('GROQ'), sys_prompt, budget)
     run_agent(agent, query)
 
 if __name__ == '__main__':

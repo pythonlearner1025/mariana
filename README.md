@@ -19,4 +19,4 @@ Project Mariana asks what synthesis at scale using AI might look like.
 - [ ] how to measure quality vs. $ burn? 
 - [ ] continued learning: use memory & improve report
 - [ ] clean pdf readings 
-- [ ] gpt4 & Mixtral integration
+- [ ] OpenAI & Groq integration
