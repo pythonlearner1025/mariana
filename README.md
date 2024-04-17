@@ -17,10 +17,9 @@ current search engines are bad at answering them, and the value of answering que
 1) create .env file and set your OpenAI, Anthropic, Groq api keys
 2) ```python main.py --query "why do primate brains have a hippocampus and why might AI systems want one?" --budget 5 --agent openai```
 
-# reports
-Check out some reports Mariana generated at /reports. The queries were:
-- "AI architectural inspirations to draw from basal ganglia & hippocampus function"
-- "how to reward language in LLMs for alphago-like self-play"
+# example reports
+Check out some example reports Mariana generated in /reports. The query was:  
+```Why do primate brains have a hippocampus and why might AI systems want one```
 
 # observations
 - ```claude-3-opus``` writes best reports, followed by ```gpt-4-turbo-2024-04-09```
