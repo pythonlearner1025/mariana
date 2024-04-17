@@ -1,6 +1,6 @@
 [
   {
-    "name": "write_report",
+  "name": "write_markdown_report",
     "description": "Writes a report with the given title and text content.",
     "input_schema": {
       "type": "object",
@@ -9,13 +9,13 @@
           "type": "string",
           "description": "The title of the report."
         },
-        "text": {
+        "markdown_report": {
           "type": "string",
-          "description": "The text content of the report."
+          "description": "The markdown text body of the technical report, with citations."
         }
       },
       "required": [
-        "title",
+        "markdown_report",
         "text"
       ]
     }
