@@ -1,7 +1,5 @@
 # Brain-Inspired Paths to Artificial General Intelligence
 
-*written by claude-3-opus*
-
 ## Abstract
 Despite remarkable progress, current artificial intelligence (AI) systems based on deep learning neural networks still fall short of human-like intelligence in crucial ways. They struggle with abstraction, causal reasoning, generalizing to novel situations, building coherent world models, and learning efficiently from small amounts of data. Solving these challenges to create artificial general intelligence (AGI) will require moving beyond approaches focused solely on scaling up pattern recognition in disembodied neural networks. The most promising path forward is to take inspiration from the only known example of general intelligence - the animal brain - and design AI systems that incorporate its key computational and architectural principles. Three fruitful directions are: 1) combining neural networks with symbolic reasoning in synergistic neuro-symbolic architectures, 2) training embodied agents with intrinsic curiosity to acquire general skills through open-ended interaction with complex environments, and 3) leveraging flexible temporal hierarchies and transient neural dynamics for cognitive flexibility. By grounding AI more firmly in computational neuroscience and centering real-world interaction and temporal structure, we can accelerate progress towards robustly capable and adaptive AGI.
 

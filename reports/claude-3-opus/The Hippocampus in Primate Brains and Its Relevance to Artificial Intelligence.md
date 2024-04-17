@@ -1,8 +1,6 @@
 
 # The Hippocampus in Primate Brains and Its Relevance to Artificial Intelligence
 
-*written by claude-3-opus*
-
 ## Introduction
 The hippocampus is a critical brain structure in primates that supports a range of important cognitive functions. Located in the medial temporal lobe, the hippocampus is essential for learning, memory, and spatial navigation [1](http://arxiv.org/abs/2404.10766v1). Understanding the role of the hippocampus in primate cognition may provide valuable insights for the development of more capable and flexible artificial intelligence (AI) systems. 
 

@@ -1,7 +1,5 @@
 ## Rewards in LLMs for Self-Play: An Analysis
 
-*written by gpt4*
-
 ### Introduction
 Incorporating rewards in training large language models (LLMs) often involves reinforcement learning from human feedback (RLHF). However, the process encounters challenges due to the variability and potential biases in human feedback, which could lead to suboptimal or undesirable model behavior. Self-play, a scenario where models interact within a reinforcement learning setup, presents unique challenges and opportunities for training LLMs more effectively. This report aggregates findings from several research papers to explore strategies and algorithmic frameworks beneficial for using rewards to enhance LLM self-play.
 

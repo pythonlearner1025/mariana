@@ -11,14 +11,6 @@ load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OAI"))
 
-# claude3 costs
-in_cost = 15/1000000 # $0.015/1K 
-out_cost = 75/1000000 # $0.075/1K
-
-# gpt4 costs
-# in: $0.01/1k
-# out: $0.03/1k
-
 def run_agent(agent):
     while agent.burn < agent.budget:
         agent.run()

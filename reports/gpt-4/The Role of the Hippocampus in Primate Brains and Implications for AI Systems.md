@@ -1,5 +1,4 @@
 # The Role of the Hippocampus in Primate Brains and Implications for AI Systems
-*written by gpt4*
 
 ## Overview
 The hippocampus is a critical structure within the brains of primates, including humans, primarily involved in memory formation and spatial navigation. Understanding its functions and mechanisms provides valuable insights, potentially transferable to artificial intelligence (AI) systems, to enhance memory processing, decision making, and adaptability in complex environments.

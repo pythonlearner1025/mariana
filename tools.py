@@ -6,7 +6,7 @@ from exa_py import Exa
 load_dotenv()
 exa = Exa(os.getenv("EXA"))
 
-def execute_tool(tool_name, tool_input):
+def execute_tool(tool_name, tool_input, model='generic'):
     if tool_name == "save_papers":
         return save_papers(tool_input["papers"])
     elif tool_name == "search_arxiv":
@@ -20,11 +20,11 @@ def execute_tool(tool_name, tool_input):
     elif tool_name == 'return_first_n_pages':
         return return_first_n_pages(tool_input["files"])
     elif tool_name == 'write_markdown_report':
-        return write_markdown_report(tool_input["title"], tool_input["markdown_report"])
+        return write_markdown_report(tool_input["title"], tool_input["markdown_report"], model=model)
     else:
         raise ValueError(f"Unknown tool: {tool_name}")
 
-def write_markdown_report(title: str, text: str) -> None:
+def write_markdown_report(title: str, text: str, model : str = 'generic') -> None:
     '''
     Writes a report with the given title and text content.
 
@@ -32,7 +32,10 @@ def write_markdown_report(title: str, text: str) -> None:
     param str text: The text content of the report.
     return None
     '''
-    with open(f'reports/{title}.md', 'w') as f:
+    model_dir = os.path.join('reports', model)
+    if not os.path.exists(model_dir): os.mkdir(model_dir)
+    title = os.path.join(model_dir, f'{title}.md')
+    with open(title, 'w') as f:
         f.write(text)
     exit(-1)
 

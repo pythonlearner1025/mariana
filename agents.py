@@ -82,7 +82,7 @@ class OAIAgent(BaseAgent):
                         args = json.loads(tool.function.arguments)
                         self.log('== calling tool ==')
                         self.log(f"{function} {args}")
-                        output = execute_tool(function, args)
+                        output = execute_tool(function, args, model='gpt-4')
                         outs.append({'tool_call_id': call_id, 'output': f'{output}'})
                     self.submit_to_run(event, outs)
 
@@ -120,7 +120,7 @@ class OAIAgent(BaseAgent):
                         self.log('== calling tool ==')
                         self.log(f"tool name: {function} ")
                         self.log(f'tool args: {args}')
-                        output = execute_tool(function, args)
+                        output = execute_tool(function, args, model='gpt-4')
                         self.log(f'tool output: {output}')
                         outs.append({'tool_call_id': call_id, 'output': f'{output}'})  
                     self.submit_to_run(event, outs)
@@ -173,7 +173,7 @@ class AnthropicAgent(BaseAgent):
                 self.log('== calling function ==')
                 self.log(f'tool name: {tool.name}')
                 self.log(f'tool args {tool.input}')
-                result = execute_tool(tool.name, tool.input)
+                result = execute_tool(tool.name, tool.input, model='claude-3-opus')
                 self.log(f'tool output: {result}')
                 obs.append({"tool_name": tool.name, "tool_input": tool.input, "tool_result": result})
         return obs

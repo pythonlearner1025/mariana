@@ -1,7 +1,5 @@
 ### Title: Enhancing Large Language Models for Self-play via Reward Language Implementation
 
-*written by gp4*
-
 ### Introduction
 
 The concept of encouraging self-play in large language models (LLMs) through the strategic use of reward language is an innovative approach that leverages the natural language understanding capabilities of these models. This method involves designing reward structures that guide the model’s learning process, encouraging the development of behaviors that are beneficial for self-play scenarios.

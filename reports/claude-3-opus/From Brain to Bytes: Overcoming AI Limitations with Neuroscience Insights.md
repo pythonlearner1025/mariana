@@ -1,7 +1,5 @@
 # From Brain to Bytes: Overcoming AI Limitations with Neuroscience Insights
 
-*written by claude-3-opus*
-
 ## Introduction
 
 Artificial intelligence has made remarkable progress in recent years, achieving human-level or even superhuman performance on narrow tasks like image classification, game playing, and language modeling. However, today's AI systems still fall far short of human intelligence in crucial ways - they struggle with abstract reasoning, lack true understanding of cause-and-effect relationships, fail to generalize knowledge to new domains, and require massive training datasets [1,2].  
