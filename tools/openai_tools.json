@@ -1,0 +1,194 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "write_markdown_report",
+      "description": "Writes a report with the given title and text content.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The title of the report."
+          },
+          "markdown_report": {
+            "type": "string",
+            "description": "The markdown text body of the technical report, with citations."
+          }
+        },
+        "required": [
+          "title",
+          "markdown_report"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "save_papers",
+      "description": "Downloads papers from the provided URLs and saves them as PDF files.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "papers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "title",
+                "url"
+              ]
+            },
+            "description": "A list of dictionaries containing 'title' and 'url' keys."
+          }
+        },
+        "required": [
+          "papers"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "return_first_n_pages",
+      "description": "Opens PDF files and returns the text from the first n pages of each file.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "files": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A list of file paths to PDF files."
+          },
+          "n": {
+            "type": "integer",
+            "description": "The number of pages to extract text from (default is 3)."
+          }
+        },
+        "required": [
+          "files"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "search_arxiv",
+      "description": "Performs a search on the arXiv API using the provided query.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "The search query string."
+          },
+          "max_results": {
+            "type": "integer",
+            "description": "The maximum number of results to retrieve (default is 10)."
+          }
+        },
+        "required": [
+          "query", "max_results"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "search_exa",
+      "description": "Searches for papers on arXiv using the Exa API.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "The search query string."
+          },
+          "start": {
+            "type": "string",
+            "description": "The start date for the search in the format 'YYYY-MM-DD'."
+          },
+          "end": {
+            "type": "string",
+            "description": "The end date for the search in the format 'YYYY-MM-DD'."
+          },
+          "max_results": {
+            "type": "integer",
+            "description": "The maximum number of results to retrieve (default is 10)."
+          }
+        },
+        "required": [
+          "query",
+          "start",
+          "end",
+          "max_results"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "clear_working_memory",
+      "description": "Clears the files in the memory/working directory. If persist is True, moves the files to memory/episodic instead.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "persist": {
+            "type": "boolean",
+            "description": "Determines whether to move the files to memory/episodic or delete them (default is True)."
+          }
+        },
+        "required": ["persist"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "create_context",
+      "description": "Creates a context string containing paper abstracts.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "papers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "url": {
+                  "type": "string"
+                },
+                "abstract": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "url",
+                "abstract"
+              ]
+            },
+            "description": "A list of dictionaries containing 'url' and 'abstract' keys."
+          }
+        },
+        "required": [
+          "papers"
+        ]
+      }
+    }
+  }
+]

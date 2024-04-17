@@ -1,0 +1,172 @@
+[
+  {
+    "name": "write_report",
+    "description": "Writes a report with the given title and text content.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the report."
+        },
+        "text": {
+          "type": "string",
+          "description": "The text content of the report."
+        }
+      },
+      "required": [
+        "title",
+        "text"
+      ]
+    }
+  },
+  {
+    "name": "save_papers",
+    "description": "Downloads papers from the provided URLs and saves them as PDF files.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "papers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "title",
+              "url"
+            ]
+          },
+          "description": "A list of dictionaries containing 'title' and 'url' keys."
+        }
+      },
+      "required": [
+        "papers"
+      ]
+    }
+  },
+  {
+    "name": "return_first_n_pages",
+    "description": "Opens PDF files and returns the text from the first n pages of each file.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of file paths to PDF files."
+        },
+        "n": {
+          "type": "integer",
+          "description": "The number of pages to extract text from (default is 3)."
+        }
+      },
+      "required": [
+        "files"
+      ]
+    }
+  },
+  {
+    "name": "search_arxiv",
+    "description": "Performs a search on the arXiv API using the provided query.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "The search query string."
+        },
+        "max_results": {
+          "type": "integer",
+          "description": "The maximum number of results to retrieve (default is 10)."
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "search_exa",
+    "description": "Searches for papers on arXiv using the Exa API.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "The search query string."
+        },
+        "start": {
+          "type": "string",
+          "description": "The start date for the search in the format 'YYYY-MM-DD'."
+        },
+        "end": {
+          "type": "string",
+          "description": "The end date for the search in the format 'YYYY-MM-DD'."
+        },
+        "max_results": {
+          "type": "integer",
+          "description": "The maximum number of results to retrieve (default is 10)."
+        }
+      },
+      "required": [
+        "query",
+        "start",
+        "end"
+      ]
+    }
+  },
+  {
+    "name": "clear_working_memory",
+    "description": "Clears the files in the memory/working directory. If persist is True, moves the files to memory/episodic instead.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "persist": {
+          "type": "boolean",
+          "description": "Determines whether to move the files to memory/episodic or delete them (default is True)."
+        }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "create_context",
+    "description": "Creates a context string containing paper abstracts.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "papers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string"
+              },
+              "abstract": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "url",
+              "abstract"
+            ]
+          },
+          "description": "A list of dictionaries containing 'url' and 'abstract' keys."
+        }
+      },
+      "required": [
+        "papers"
+      ]
+    }
+  }
+]
