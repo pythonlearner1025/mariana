@@ -1,0 +1,7 @@
+openai
+groq
+anthropic
+python-dotenv
+tiktoken
+exa_py
+pypdf

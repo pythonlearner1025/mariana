@@ -166,6 +166,8 @@ class AnthropicAgent:
        return self.burn
 
 class GroqAgent:
+    # currently unable to function call, so technically not an agent
+    # but would be interesting to see what it can do
     def __init__(self, key, sys_prompt, budget, model='mixtral-8x7b-32768'):
         self.client = Groq(api_key=key)
         self.model = model

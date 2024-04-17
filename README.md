@@ -1,10 +1,18 @@
 # mariana - synthesis at scale
+
+Research agent that browses arxiv to answer your question. \\  
+
 Humanity's best ideas have been interdisciplinary: for example, deep learning was ushered in by researchers with deep expertise in cognitive science and computer science. 
 However, minds that can synthesize new insights from multiple subjects are rare. 
 Fundamentally, our brains weren't designed for large-scale information synthesis. 
 Nobody can hold 100 papers in their working memory at once (we can barely hold seven digits).
 But we can engineer AI to do exactly that, and more. 
 Project Mariana asks what synthesis at scale using AI might look like.
+
+# how to run
+
+1) create .env file and set your OpenAI, Anthropic, Groq api keys
+2) ```python main.py --query "why do primate brains have a hippocampus and why might AI systems want one?"```
 
 # reports
 
