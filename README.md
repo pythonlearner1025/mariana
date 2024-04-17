@@ -2,7 +2,7 @@
 
 Search agent that does deep saerch to answer your question.    
 
-The core idea is that the quality of search should scale with the value of answering the search query (quantified by $ spend budget)  
+The core idea is that the quality of search should scale with the value of the answer to the query (quantified by $ spend budget)  
 
 I'm betting that for queries like: 
 - candidate compounds for new drug synthesis (drug development)
@@ -11,7 +11,7 @@ I'm betting that for queries like:
 
 Current search engines are bad at answering them, and the value of answering queries justifies long wait times & search cost.  
 
-**Experimental**, only supports arxiv search using Exa & arxiv API currently for research related queries.
+*Experimental*, only supports arxiv search using Exa & arxiv API currently for research related queries.
 
 # how to run
 1) create .env file and set your OpenAI, Anthropic, Groq api keys
