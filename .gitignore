@@ -1,5 +1,6 @@
 /memory/
 /memory
+/logs
 /__pycache__
 .env
 report.txt
