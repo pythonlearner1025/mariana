@@ -131,6 +131,7 @@ class AnthropicAgent:
         self.out_price = 75/1000000
         self.messages = []
         self.model = model
+        self.latest = Usage()
     
     def call(self, msg : str):
         self.messages.append({'role': 'user', 'content': msg})
@@ -158,6 +159,9 @@ class AnthropicAgent:
                 obs.append({"tool_name": tool.name, "tool_input": tool.input, "tool_result": result})
         return obs
 
+    def get_latest_burn(self):
+        return self.in_price*self.latest.input_tokens + self.out_price*self.latest.output_tokens
+        
     def get_burn(self): 
        return self.burn
 
@@ -171,6 +175,7 @@ class GroqAgent:
         }]
         self.budget = budget
         self.burn = 0
+        self.latest = Usage()
     
     def call(self, msg):
         self.messages.append({
@@ -187,6 +192,12 @@ class GroqAgent:
         ) as stream:
             for chunk in stream:
                 print(chunk.choices[0].delta.content, end="")
+    
+    def get_latest_burn(self):
+        return self.in_price*self.latest.input_tokens + self.out_price*self.latest.output_tokens
+        
+    def get_burn(self): 
+       return self.burn
 
 
 def count_tok(text, model="gpt-4-turbo"):

@@ -9,7 +9,7 @@ Project Mariana asks what synthesis at scale using AI might look like.
 # reports
 
 Check out some reports Mariana generated at /reports. The prompting research questions were:
-- "AI arichtectural inspirations we can draw from basal ganglia & hippocampus function"
+- "AI architectural inspirations to draw from basal ganglia & hippocampus function"
 - "how to reward language in LLMs for alphago-like self-play"
 
 # design philosophy

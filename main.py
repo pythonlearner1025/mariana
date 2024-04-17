@@ -22,7 +22,7 @@ out_cost = 75/1000000 # $0.075/1K
 def run_agent(agent, query):
     while agent.burn < agent.budget:
         agent.call(query)
-        #print(f'in_toks: {agent.latest.input_tokens} | out_toks: {agent.latest.output_tokens} |  msg cost: ${agent.get_latest_burn()} | total cost: ${agent.get_burn()}')
+        print(f'in_toks: {agent.latest.input_tokens} | out_toks: {agent.latest.output_tokens} |  msg cost: ${agent.get_latest_burn()} | total cost: ${agent.get_burn()}')
         input()
 
 def main():
