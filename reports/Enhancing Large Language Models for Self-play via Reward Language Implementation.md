@@ -1,6 +1,6 @@
 ### Title: Enhancing Large Language Models for Self-play via Reward Language Implementation
 
----
+*written by gp4*
 
 ### Introduction
 

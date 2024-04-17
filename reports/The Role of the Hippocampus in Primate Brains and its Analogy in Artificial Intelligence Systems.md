@@ -1,4 +1,5 @@
 # The Role of the Hippocampus in Primate Brains and its Analogy in Artificial Intelligence Systems
+*written by gpt4*
 
 ## Overview
 The hippocampus is a critical region of the brain in primates, known for its role in forming and retrieving memories, spatial navigation, and learning. This report explores the unique functions of the hippocampus in primate brains and discusses how analogous mechanisms could be beneficial in designing artificial intelligence (AI) systems.

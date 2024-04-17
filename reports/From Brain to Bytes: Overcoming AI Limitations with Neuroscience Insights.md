@@ -1,5 +1,6 @@
-
 # From Brain to Bytes: Overcoming AI Limitations with Neuroscience Insights
+
+*written by claude-3-opus*
 
 ## Introduction
 
