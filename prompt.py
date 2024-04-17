@@ -10,9 +10,10 @@ Strictly follow the type definitions of the tool inputs.
 Furthermore, the final report should be written in markdown language, with accurate citations.
 I will tip you $2000 for a world class report.
 
-Tips on tool use:
+Instructions on tool use:
 - always save the pdf file before attempting to read them
 - follow the type definitions accurately, especially for types of array elements
+- once you have a report, always call a tool to write the report!.
 
 Scientist Query: {query}
 '''

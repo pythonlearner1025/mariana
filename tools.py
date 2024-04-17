@@ -76,12 +76,16 @@ def search_arxiv(query: str, max_results: int = 10) -> str:
     param int max_results: The maximum number of results to retrieve (default is 10).
     return str: The search results as a string in XML format.
     '''
-    query = query.replace(" ", "%20")
-    url = f'http://export.arxiv.org/api/query?search_query=all:{query}&sortBy=lastUpdatedDate&sortOrder=descending&max_results={max_results}'
-    data = urllib.request.urlopen(url)
-    res = data.read().decode('utf-8')
-    print(f'search_arxiv result: {res}')
-    return res
+    try:
+        query = query.replace(" ", "%20")
+        url = f'http://export.arxiv.org/api/query?search_query=all:{query}&sortBy=lastUpdatedDate&sortOrder=descending&max_results={max_results}'
+        data = urllib.request.urlopen(url)
+        res = data.read().decode('utf-8')
+        print(f'search_arxiv result: {res}')
+        return res
+    except Exception as e:
+        print(e)
+        return f'{e}'
 
 def search_exa(query: str, start: str, end: str, max_results: int = 10) -> dict[str, str]:
     '''
@@ -93,16 +97,21 @@ def search_exa(query: str, start: str, end: str, max_results: int = 10) -> dict[
     param int max_results: The maximum number of results to retrieve (default is 10).
     return dict[str, str]: A dictionary where the keys are the paper titles and the values are the corresponding URLs.
     '''
-    res = exa.search_and_contents(
-        query,
-        text={"start_crawl_date": start, "end_crawl_date": end},
-        include_domains=["https://arxiv.org"],
-        category="papers",
-        num_results=max_results
-    ).results
-    result = {r.title: r.url for r in res}
-    print(f'search_exa result: {result}')
-    return result
+    try:
+        res = exa.search_and_contents(
+            query,
+            text={"start_crawl_date": start, "end_crawl_date": end},
+            include_domains=["https://arxiv.org"],
+            category="papers",
+            num_results=max_results
+        ).results
+        result = {r.title: r.url for r in res}
+        print(f'search_exa result: {result}')
+        return result
+    except Exception as e:
+        print(e)
+        return f'{e}'
+
 
 def clear_working_memory(persist: bool = True) -> bool:
     '''
