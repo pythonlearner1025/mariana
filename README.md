@@ -9,7 +9,7 @@ I'm betting that for queries like:
 - what can we learn from field A to apply to field B (research)
 - everyone who's working on X currently (recruiting)
 
-Current search engines are bad at answering them, and the value of answering queries justifies long wait times & search cost.  
+current search engines are bad at answering them, and the value of answering queries justifies long wait times & search cost.  
 
 *Experimental*, only supports arxiv search using Exa & arxiv API currently for research related queries.
 
