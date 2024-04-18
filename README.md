@@ -5,8 +5,8 @@ Search agent that does deep search to answer your question.
 The core idea is that quality of search should scale with the value of answering a query (quantified by $ spend budget)  
 
 I'm betting that for queries like: 
-- which chemical compounds might have similar effects as ketamine? (drug development)
-- How does the basal ganglia work and what can AI researchers learn from it? (research)
+- which chemical compounds might have similar effects as ketamine? (drug discovery)
+- How does the basal ganglia work and what can AI researchers learn from it? (AI research)
 - Who's built zero-knowledge proof projects? (recruiting)
 
 current search engines are bad at answering them, and the value of answering queries justifies long wait times & search cost.  
