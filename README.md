@@ -1,17 +1,17 @@
 # mariana - deep search agent
 
-Search agent that does deep saerch to answer your question.    
+Search agent that does deep search to answer your question.    
 
-The core idea is that the quality of search should scale with the value of the answer to the query (quantified by $ spend budget)  
+The core idea is that quality of search should scale with the value of answering a query (quantified by $ spend budget)  
 
 I'm betting that for queries like: 
-- candidate compounds for new drug synthesis (drug development)
-- what can we learn from field A to apply to field B (research)
-- everyone who's working on X currently (recruiting)
+- which chemical compounds might have similar effects as ketamine? (drug development)
+- How does the basal ganglia work and what can AI researchers learn from it? (research)
+- Who's built zero-knowledge proof projects? (recruiting)
 
 current search engines are bad at answering them, and the value of answering queries justifies long wait times & search cost.  
 
-*Experimental*, only supports arxiv search using Exa & arxiv API currently for research related queries.
+*Experimental*, only supports arxiv search using Exa & arxiv API currently for research related queries. 
 
 # how to run
 1) create .env file and set your OpenAI, Anthropic, Groq api keys

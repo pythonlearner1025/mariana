@@ -62,6 +62,7 @@ class OAIAgent(BaseAgent):
             assistant_id=self.assistant.id,
         ) as stream:
             for event in stream:
+                print(event)
                 if isinstance(event, openai.types.beta.assistant_stream_event.ThreadRunStepDelta):
                     txt = event.data.delta.step_details.tool_calls[0].function.arguments
                     output_tokens += count_tok(txt)
