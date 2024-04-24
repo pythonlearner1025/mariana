@@ -16,7 +16,7 @@ def execute_tool(tool_name, tool_input, model='generic'):
     elif tool_name == "clear_working_memory":
         return clear_working_memory(tool_input["persist"])
     elif tool_name == "create_context":
-        return create_context(tool_input["papers"])
+        return create_context(tool_input["papers"], model=model)
     elif tool_name == 'return_first_n_pages':
         return return_first_n_pages(tool_input["files"])
     elif tool_name == 'write_markdown_report':
@@ -51,6 +51,7 @@ def save_papers(papers: list[dict[str, str]]) -> list[str]:
         title, url = paper['title'], paper['url']
         url = url.replace('/abs/', '/pdf/')
         filename = title + ".pdf"
+        if not os.path.exists('memory/raw'): os.makedirs('memory/raw')
         urllib.request.urlretrieve(url, f"memory/raw/{filename}")
         res.append(f'saving paper {url} to memory/raw/{filename}')
         print(f'saving paper {url} to memory/raw/{filename}')
@@ -136,7 +137,7 @@ def clear_working_memory(persist: bool = True) -> bool:
         print(e)
         return False
 
-def create_context(papers: list[dict[str, str]]) -> str:
+def create_context(papers: list[dict[str, str]], model: str = 'anthropic') -> str:
     '''
     Creates a context string containing paper abstracts.
 
